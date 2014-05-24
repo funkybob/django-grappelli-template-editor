@@ -1,2 +1,16 @@
-recursive-include grapelli_te/templates *.html
-recursive-include grappelli_te/static *.js *.css
+recursive-include grappelli_te/templates/ *
+recursive-include grappelli_te/templates/grappelli_te *
+recursive-include grappelli_te/static/ *
+recursive-include grappelli_te/static/grappelli_te *
+recursive-include grappelli_te/static/grappelli_te/js *
+recursive-include grappelli_te/static/grappelli_te/codemirror *
+recursive-include grappelli_te/static/grappelli_te/codemirror/theme *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/css *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/htmlmixed *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/htmlembedded *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/xml *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/django *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/javascript *
+recursive-include grappelli_te/static/grappelli_te/codemirror/mode/python *
+recursive-include grappelli_te/static/grappelli_te/codemirror/lib *
