@@ -1,0 +1,2 @@
+recursive-include grapelli_te/templates *.html
+recursive-include grappelli_te/static *.js *.css
