@@ -1,3 +1,6 @@
+
+// Why must this be declared globally, KO?
+var VM;
 (function($) {
     $(document).ready(function () {
         var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
@@ -6,7 +9,7 @@
             lineNumbers: true
         });
 
-        var VM = {
+        VM = {
             rootNode: ko.observableArray([]),
             refreshList: function () {
                 $.getJSON('list/', function (data) {
