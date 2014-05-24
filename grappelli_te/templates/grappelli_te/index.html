@@ -1,0 +1,53 @@
+{% extends 'admin/base_site.html' %}
+{% load static %}
+
+{% block title %}Edit Templates{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="test/css" href="{% static 'codemirror/lib/codemirror.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'codemirror/theme/solarized.css' %}">
+    <style type="text/css">
+.node {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+</style>
+{% endblock %}
+
+{% block extrahead %}
+    <script src="{% static 'grappelli_te/js/knockout-min.js"></script>
+    <script src="{% static 'grappelli_te/js/csrf.js' %}"></script>
+    <script src="{% static 'grappelli_te/codemirror/lib/codemirror.js' %}"></script>
+    <script src="{% static 'grappelli_te/codemirror/mode/xml/xml.js' %}"></script>
+    <script src="{% static 'grappelli_te/codemirror/mode/javascript/javascript.js' %}"></script>
+    <script src="{% static 'grappelli_te/codemirror/mode/css/css.js' %}"></script>
+    <script src="{% static 'grappelli_te/js/init.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="l-2c-fluid l-d-8">
+    <div class="c-1">
+        <div class="grp-module" id="template-list">
+            <h2> Select Template </h2>
+            <!-- ko foreach: rootNode -->
+            <div class="grp-row node" data-bind="text: path, event: { dblclick: VM.openFile }"></div>
+            <!-- /ko -->
+        </div>
+    </div>
+    <div class="c-2">
+        <footer class="grp-module grp-submit-row">
+            <header style="display:none"><h1>Submit Options</h1></header>
+            <ul>
+                <li class="grp-float-left"><input name="name" class="grp-button"></li>
+                <li><button name="save" class="grp-button" data-bind="click: saveFile">Save</button></li>
+                <li><button name="close" class="grp-button" data-bind="click: closeFile">Close</button></li>
+            </ul>
+        </footer>
+        <div class="grp-module">
+            <div class="grp-row"><textarea id="editor"></textarea></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
