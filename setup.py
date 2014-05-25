@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-grappelli-template-editor',
-    version='0.3',
+    version='0.4',
     description='A TTW Template Editor for Grappelli',
     author='Curtis Maloney',
     author_email='curtis@tinbrain.net',
