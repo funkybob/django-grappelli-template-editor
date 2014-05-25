@@ -12,6 +12,8 @@
     -webkit-user-select: none;
     -moz-user-select: none;
 }
+
+.node active { font-weight: bold; }
 </style>
 {% endblock %}
 
@@ -22,6 +24,7 @@
     <script src="{% static 'grappelli_te/codemirror/mode/xml/xml.js' %}"></script>
     <script src="{% static 'grappelli_te/codemirror/mode/javascript/javascript.js' %}"></script>
     <script src="{% static 'grappelli_te/codemirror/mode/css/css.js' %}"></script>
+    <script src="{% static 'grappelli_te/codemirror/mode/django/django.js' %}"></script>
     <script src="{% static 'grappelli_te/js/init.js' %}"></script>
 {% endblock %}
 
@@ -42,7 +45,7 @@
                 <li class="grp-float-left"><input name="name" class="grp-button"></li>
                 <li class="grp-float-left"><button name="indent" class="grp-button" data-bind="click: reIndent">Re-Indent</button></li>
                 <li><button name="save" class="grp-button" data-bind="click: saveFile">Save</button></li>
-                <li><button name="close" class="grp-button" data-bind="click: closeFile">Close</button></li>
+                <li><button name="close" class="grp-button grp-delete-link" data-bind="click: closeFile">Close</button></li>
             </ul>
         </footer>
         <div class="grp-module">
