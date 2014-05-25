@@ -45,6 +45,11 @@ var VM;
                 editor.setValue('');
                 editor.markClean();
                 $('[name=name]').val('');
+            },
+            reIndent: function () {
+                for(var i=0, l=editor.lineCount(); i < l ; i++ ) {
+                    editor.indentLine(i);
+                }
             }
         };
 
