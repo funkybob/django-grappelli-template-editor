@@ -54,6 +54,12 @@ def template_detail(request):
 
         if not full_path.startswith(root):
             raise Http404
+
+        try:
+            os.makedirs(os.path.dirname(full_path))
+        except os.error:
+            pass
+
         # Saving
         with open(full_path, 'w') as fout:
             fout.write(request.POST['data'])
