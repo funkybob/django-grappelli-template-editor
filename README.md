@@ -11,7 +11,7 @@ Add to INSTALLED_APPS
 
 Into your root urls, before admin, insert the line:
 
-    (r'^admin/templates/', include('grappeli_te.urls')),
+    (r'^admin/templates/', include('grappelli_te.urls')),
 
 
 Usage
