@@ -7,7 +7,17 @@ Allows you to edit templates through an extra Grappelli dashboard page
 Installation
 ------------
 
+Install the package:
+
+    $ pip install django-grapelli-template-editor
+
 Add to INSTALLED_APPS
+
+    INSTALLED_APPS = (
+        ...
+        'grappelli_te',
+        '''
+    )
 
 Into your root urls, before admin, insert the line:
 
